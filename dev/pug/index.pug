@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+html(lang="it")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Earpods Landing
+		// styles:css
+		// endinject
+	body
+		header.hero
+			.container.hero__container
+				.row
+					.col-lg-4.mx-auto
+						.hero__heading TEMPO RIMASTO PER ACQUISTARE:
+						.hero__countdown
+							.countdown
+								.countdown__block
+									.countdown__digits-panel
+										span.countdown__digits#countdown-hours
+									.countdown__digits-description Ore
+								.countdown__block
+									.countdown__digits-panel
+										span.countdown__digits#countdown-minutes
+									.countdown__digits-description MINUTI
+								.countdown__block
+									.countdown__digits-panel
+										span.countdown__digits#countdown-seconds
+									.countdown__digits-description SECONDI
+						.hero__button
+							button.button Ordira ora
+		section.service-panel-section
+			.container
+				.panel
+					.row.align-items-center
+						.col-lg-10
+							.panel__text
+								p 
+									span.font-bold Il prodotto del futuro in 
+										span.text-accent 48 ore 
+										| a casa tua
+								p Compra il prodotto originale sul nostro sito per evitare contraffazioni
+								p
+									span.text-accent 100% QUALITÀ GARANTITA
+						.col-lg-2
+							img(src="assets/images/delivery.svg", alt="").panel__icon
+		section.video-section
+			.container
+				.row
+					.col-12
+						video.video(src="assets/video/video.mp4" autoplay controls)
+		section.order-section
+			.container
+				.row
+					.col-lg-8.mx-auto
+						h2.order-section__heading xPower SOUND sono le cuffie wireless definitive per i tuoi ALLENAMENTI
+				.row.justify-content-center
+						.col-lg-4.col-md-6
+							.card
+								.card__top
+									.card__image-wrapper.card__image-wrapper--short
+										img(src!="assets/images/1-short.png", alt="").card__image
+								.card__bottom.card__bottom--tall
+									.card__title SUONO DI QUALITA'
+									.card__text.card__text--fixed-height Preparati a vivere un nuovo livello di eccellenza audio. Queste cuffie coniugano una tecnologia innovativa e materiali ricercati per offrire un'esperienza di ascolto straordinaria.
+									.card__button
+										a(href="").card__cta ORDINA ORA
+						.col-lg-4.col-md-6
+							.card
+								.card__top
+									.card__image-wrapper.card__image-wrapper--short
+										img(src!="assets/images/2-short.png", alt="").card__image
+								.card__bottom.card__bottom--tall
+									.card__title BATTERIA LUNGA DURATA
+									.card__text.card__text--fixed-height Fino a 5 ore di ascolto della tua musica preferita con una sola ricarica! Ricevi telefonate, lascia che la musica ti segua, rendi meraviglioso il tuo viaggio!
+									.card__button
+										a(href="").card__cta ORDINA ORA
+						.col-lg-4.col-md-6
+							.card
+								.card__top
+									.card__image-wrapper.card__image-wrapper--short
+										img(src!="assets/images/3-short.png", alt="").card__image
+								.card__bottom.card__bottom--tall
+									.card__title PER LO SPORT
+									.card__text.card__text--fixed-height Design ergonomico per un tilizzo confortevole in tutte le situazioni, anche durante lo sport. Utilizza le cuffie durante le tue sessioni di allenamento con xPower!
+									.card__button
+										a(href="").card__cta ORDINA ORA
+		section.complect-section
+			.container
+				.row
+					.col-lg-8.mx-auto
+						h2.complect-section__heading Compresi nella confezione
+				.row
+					.col-12
+						.complect-plate
+							img(src="assets/images/complect.png", alt="").complect-image
+		section.feature-panel-section
+			.container
+				.panel
+					.row.align-items-center
+						.col-lg-10
+							.panel__text
+								p Il prodotto utilizza la tecnologia 
+									span.font-bold Bluetooth 4.1 EDR
+									| , che assicura una migliore 
+									span.font-bold qualità 
+									| del suono.
+						.col-lg-2
+							img(src="assets/images/bluetooth.svg", alt="").panel__icon
+		section.response-section
+			.container
+				.row
+					.col-lg-8.mx-auto
+						h2.response-section__heading Recensioni
+				.row.justify-content-center
+					.col-lg-4.col-md-6
+						.card
+							.card__top
+								.card__image-wrapper.card__image-wrapper--tall
+									img(src="assets/images/1-tall.png", alt="").card__image
+							.card__bottom.card__bottom--short
+								.product-review
+									.product-review__heading Per lo sport
+									.product-review__review Le usi durante lallenamento e le trovo molto ergonomiche.
+									.product-review__author Claudia
+					.col-lg-4.col-md-6
+						.card
+							.card__top
+								.card__image-wrapper.card__image-wrapper--tall
+									img(src="assets/images/2-tall.png", alt="").card__image
+							.card__bottom.card__bottom--short
+								.product-review
+									.product-review__heading Migilore cuffie +++
+									.product-review__review Tra le migliori cuffie wireless al momento, mi trovo molto bene.
+									.product-review__author Kavin
+					.col-lg-4.col-md-6
+						.card
+							.card__top
+								.card__image-wrapper.card__image-wrapper--tall
+									img(src="assets/images/3-tall.png", alt="").card__image
+							.card__bottom.card__bottom--short
+								.product-review
+									.product-review__heading Audio perfetto
+									.product-review__review Ascolto la musica tutti i giorni queste cuffie e si sente molto bene.
+									.product-review__author Alessandra
+		section.information-section
+			.container
+				.row
+					.col-lg-8.mx-auto
+						h2.information-section__heading Informazioni Sul prodotto
+				.information-list
+					.information-list__item
+						.row
+							.col-lg-2
+								.information-list__point Recensione
+							.col-lg-10
+								.information-list__text
+									p Senza fili. Senza problemi. Pura magia.
+									p Xpower Sound cambia il modo di vedere le cuffie per la musica. Quando tirate fuori Xpower Sound dal vano si connettono subito al vostro iPhone, Apple Watch, iPad o Mac. La riproduzione audio inizia automaticamente non appena le indossate e si arresta quando le togliete.
+									p In Xpower Sound è presente un processore progettato ad hoc, come anche dei sensori ottici ed un accelerometro, grazie a cui le cuffie riescono a capire quando le indossate. In maniera indipendente dal fatto che voi usiate una o due cuffie, il processore in maniera automatica diffonderà l’audio e attiverà il microfono necessario. Quando parlate per telefono o con Siri un accelerometro aggiuntivo e i microfono con diagramma che cambia eliminano i suoni in eccesso e permettono di fissare il suono della vostra voce. Le cuffie Xpower Sound con il processore particolare che richiede poco consumo, consumano appunto poca batteria e permettono di ascoltare fino a 6 ore di musica senza ricarica, senza dubbio le migliori sul mercato. E con il vano per la carica senza fili possono funzionare fino a 24 ore e più. Serve una ricarica rapida? Bastano 30 minuti nella confezione e si possono ascoltare altre 3 ore di musica.
+					.information-list__item
+						.row
+							.col-lg-2
+								.information-list__point Particolarità
+							.col-lg-10
+								.information-list__text
+									p Accensione e spegnimento automatici
+									p Impostazione rapida con un movimento
+									p Accesso rapido a Siri
+									p Fino a 24 ore di funzionamento con il vano carica batterie
+									p Ricarica rapida nel vano
+									p Incredibile qualità di suono e voce
+									p Passaggio rapido tra i dispositivi
+					.information-list__item
+						.row
+							.col-lg-2
+								.information-list__point Specifiche
+							.col-lg-10
+								.information-list__text
+									p Peso
+									p Xpower Sound (ogni cuffia): 4 gr
+									p Vano caricabatterie: 38 gr
+									p Misure
+									p Xpower Sound (ogni cuffia): 16,5 мм х 18,0 мм х 40,5 мм
+									p Vano carica batterie: 44,3 мм х 21,3 мм х 53,5 мм
+									p Possibilità di connessione
+									p Xpower Sound: Bluetooth
+									p Vano carica batterie: attacco
+									p Sensori Xpower Sound (in ogni cuffia):
+									p Due microfoni orientati
+									p Due sensori ottici
+									p Accelerometro di movimento
+									p Accelerometro vocale
+									p Alimentazione e batteria
+									p Xpower Sound con vano carica batterie: più di 24 ore di riproduzione, fino a 11 ore in regime chiamata
+									p Xpower Sound senza ricarica: fino a 5 ore di riproduzione, fino a 2 ore in regime chiamata
+									p 30 minuti di ricarica nel vano permettono di ascoltare 3 ore di musica o di parlare più di unora
+					.information-list__item
+						.row
+							.col-lg-2
+								.information-list__point Richieste di sistema
+							.col-lg-10
+								.information-list__text
+									p Modelli di iPhone, iPad e iPod touch con iOS 10 o successivo
+									p Modelli Apple Watch con watchOS 3 o successivo
+									p Modelli Mac con macOS Sierra o successivo
+		section.form-section
+			.container
+				.row
+					.col-lg-8.mx-auto
+						h2.form-section__heading Pagate solo al momento della ricezione
+						h3.form-section__sub-heading Per effettuare l’ordine compilate il modulo
+				.row
+					.col-lg-4.col-md-6.col-sm-8.col-10.mx-auto
+						form(method="post" action="/").form#form
+							.form-group
+								label(for="name").form-label Nome e Cognome
+								input(type="text" name="name" data-pristine-required-message="il campo è obbligatiorio" required).form-control
+							.form-group
+								label(for="[other]address").form-label Indirizzo e n. civico
+								input(type="text" name="[other]address").form-control
+							.form-group
+								label(for="[other]city").form-label Città
+								input(type="text" name="[other]city").form-control
+							.form-group
+								label(for="[other]cap").form-label CAP
+								input(type="text" name="[other]cap").form-control
+							.form-group
+								label(for="phone").form-label Telefono (Meglio Cellulare)
+								input(type="text" name="phone" data-pristine-required-message="il campo è obbligatiorio" required).form-control
+							.form-group
+								label(for="[other]offer").form-label Scegli un'offerta
+								input(type="text" name="[other]offer").form-control
+							.form-group
+								label(for="[other]note").form-label
+									span.font-bold La spedizione è gratuita! 
+									| Note per il corriere
+								textarea(name="[other]note", cols="30", rows="3").form-control
+							.form-group
+								input.button(type="submit" value="Completa l'acquisto")
+						.form-cta
+							span.font-bold Se avete altre domande compilate il modulo e vi richiameremo
+		footer.footer
+			.container
+				.footer-contacts
+					span ST. GERARDE LTD, PO Box 832, Orion Mall, Palm Street, Victoria, Mahé, Seychelles
+				a(href="").footer-privacy-policy Informativa sulla privacy
+		// scripts:js
+		// endinject

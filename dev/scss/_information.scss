@@ -1,0 +1,27 @@
+.information-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #fafafa;
+}
+
+.information-section__heading {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 900;
+}
+
+.information-list__item {
+    &:not(:last-child) {
+        margin-bottom: 35px;
+    }
+}
+.information-list__point  {
+    font-weight: 900;
+    margin-bottom: 25px;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+    }
+}
+.information-list__text {
+
+}

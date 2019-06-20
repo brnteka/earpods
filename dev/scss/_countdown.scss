@@ -1,0 +1,32 @@
+.countdown {
+    display: flex;
+    justify-content: center;
+}
+.countdown__block {
+    flex: 0 0 auto;
+    text-align: center;
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+.countdown__digits-panel {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.countdown__digits {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    
+}
+.countdown__digits-description {
+    font-size: 12px;
+    text-align: center;
+}

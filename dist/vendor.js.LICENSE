@@ -1,0 +1,390 @@
+/* 0 */
+
+/***/
+
+/*global window */
+
+/**
+ * @license countdown.js v2.6.0 http://countdownjs.org
+ * Copyright (c)2006-2014 Stephen M. McKamey.
+ * Licensed under The MIT License.
+ */
+
+/*jshint bitwise:false */
+
+/**
+ * @public
+ * @type {Object|null}
+ */
+
+/**
+ * @param {Object} module CommonJS Module
+ */
+
+/*jshint smarttabs:true */
+
+/**
+	 * @private
+	 * @const
+	 * @type {number}
+	 */
+
+/**
+	 * @private
+	 * @param {Date} ref reference date
+	 * @param {number} shift number of months to shift
+	 * @return {number} number of days shifted
+	 */
+
+// increment month by shift
+
+// this is the trickiest since months vary in length
+
+/**
+	 * @private
+	 * @param {Date} ref reference date
+	 * @return {number} number of days
+	 */
+
+// increment month by 1
+
+/**
+	 * Applies the Timespan to the given date.
+	 * 
+	 * @private
+	 * @param {Timespan} ts
+	 * @param {Date=} date
+	 * @return {Date}
+	 */
+
+// if there is a value field, use it directly
+
+/**
+	 * @private
+	 * @param {number} value
+	 * @param {number} unit unit index into label list
+	 * @return {string}
+	 */
+
+/**
+	 * Formats the entries with singular or plural labels
+	 * 
+	 * @private
+	 * @param {Timespan} ts
+	 * @return {Array}
+	 */
+
+/**
+	 * Timespan representation of a duration of time
+	 * 
+	 * @private
+	 * @this {Timespan}
+	 * @constructor
+	 */
+
+/**
+	 * Formats the Timespan as a sentence
+	 * 
+	 * @param {string=} emptyLabel the string to use when no values returned
+	 * @return {string}
+	 */
+
+/**
+	 * Ripple up partial units one place
+	 * 
+	 * @private
+	 * @param {Timespan} ts timespan
+	 * @param {number} frac accumulated fractional value
+	 * @param {string} fromUnit source unit name
+	 * @param {string} toUnit target unit name
+	 * @param {number} conversion multiplier between units
+	 * @param {number} digits max number of decimal digits to output
+	 * @return {number} new fractional value
+	 */
+
+// ensure does not have more than specified number of digits
+
+/**
+	 * Borrow any underflow units, carry any overflow units
+	 * 
+	 * @private
+	 * @param {Timespan} ts
+	 * @param {string} toUnit
+	 */
+
+// ripple seconds up to minutes
+
+/* falls through */
+
+// ripple minutes up to hours
+
+// ripple hours up to days
+
+// ripple days up to weeks
+
+// ripple weeks up to months
+
+// ripple months up to years
+
+// ripple years up to decades
+
+// ripple decades up to centuries
+
+// ripple centuries up to millennia
+
+/**
+	 * Ripple up partial units to next existing
+	 * 
+	 * @private
+	 * @param {Timespan} ts
+	 * @param {number} digits max number of decimal digits to output
+	 */
+
+/**
+	 * Borrow any underflow units, carry any overflow units
+	 * 
+	 * @private
+	 * @param {Timespan} ts
+	 */
+
+/**
+	 * Populates the Timespan object
+	 * 
+	 * @private
+	 * @param {Timespan} ts
+	 * @param {?Date} start the starting date
+	 * @param {?Date} end the ending date
+	 * @param {number} units the units to populate
+	 * @param {number} max number of labels to output
+	 * @param {number} digits max number of decimal digits to output
+	 */
+
+// swap if reversed
+
+// reference month for determining days in month
+
+// reset to initial deltas
+
+// ripple seconds down to milliseconds
+
+// ripple milliseconds up to seconds
+
+// ripple minutes down to seconds
+
+// ripple hours down to minutes
+
+// ripple days down to hours
+
+// NOTE: never actually seen this loop more than once
+
+// ripple months down to days
+
+// weeks is always zero here
+
+// ripple years down to months
+
+// years is always non-negative here
+
+// decades, centuries and millennia are always zero here
+
+/**
+	 * Remove any units not requested
+	 * 
+	 * @private
+	 * @param {Timespan} ts
+	 * @param {number} units the units to populate
+	 * @param {number} max number of labels to output
+	 * @param {number} digits max number of decimal digits to output
+	 */
+
+// Calc from largest unit to smallest to prevent underflow
+
+// ripple millennia down to centuries
+
+// ripple centuries down to decades
+
+// ripple decades down to years
+
+// ripple day overflow back up to weeks
+
+// ripple weeks down to days
+
+//ripple days down to hours
+
+// nothing to ripple milliseconds down to
+
+// so ripple back up to smallest existing unit as a fractional value
+
+/**
+	 * Determine an appropriate refresh rate based upon units
+	 * 
+	 * @private
+	 * @param {number} units the units to populate
+	 * @return {number} milliseconds to delay
+	 */
+
+/**
+	 * API entry point
+	 * 
+	 * @public
+	 * @param {Date|number|Timespan|null|function(Timespan,number)} start the starting date
+	 * @param {Date|number|Timespan|null|function(Timespan,number)} end the ending date
+	 * @param {number=} units the units to populate
+	 * @param {number=} max number of labels to output
+	 * @param {number=} digits max number of decimal digits to output
+	 * @return {Timespan|number}
+	 */
+
+// ensure some units or use defaults
+
+// max must be positive
+
+// clamp digits to an integer between [0, 20]
+
+// ensure start date
+
+/** @type{Timespan} */
+
+// ensure end date
+
+// must wait to interpret timespans until after resolving dates
+
+// used for unit testing
+
+/** @type{Date} */
+
+/** @type{number} */
+
+// base delay off units
+
+/**
+	 * @public
+	 * @const
+	 * @type {number}
+	 */
+
+/**
+	 * Formats the Timespan as a sentence in HTML
+	 * 
+	 * @param {string=} tag HTML tag name to wrap each value
+	 * @param {string=} emptyLabel the string to use when no values returned
+	 * @return {string}
+	 */
+
+// wrap each unit in tag
+
+/**
+	 * Applies the Timespan to the given date
+	 * 
+	 * @param {Date=} date the date to which the timespan is added.
+	 * @return {Date}
+	 */
+
+/**
+	 * Formats the entries as English labels
+	 * 
+	 * @private
+	 * @param {Timespan} ts
+	 * @return {Array}
+	 */
+
+/**
+	 * Customize the format settings.
+	 * @public
+	 * @param {Object} format settings object
+	 */
+
+// override any specified units
+
+/**
+	 * Revert to the default formatting.
+	 * @public
+	 */
+
+/**
+	 * Override the unit labels.
+	 * @public
+	 * @param {string|Array=} singular a pipe ('|') delimited list of singular unit name overrides
+	 * @param {string|Array=} plural a pipe ('|') delimited list of plural unit name overrides
+	 * @param {string=} last a delimiter before the last unit (default: ' and ')
+	 * @param {string=} delim a delimiter to use between all other units (default: ', ')
+	 * @param {string=} empty a label to use when all units are zero (default: '')
+	 * @param {function(number):string=} formatNumber a function which formats numbers as a string
+	 * @param {function(number,number):string=} formatter a function which formats a number/unit pair as a string
+	 * @deprecated since version 2.6.0
+	 */
+
+/**
+	 * Revert to the default unit labels.
+	 * @public
+	 * @deprecated since version 2.6.0
+	 */
+
+/**
+ * API entry
+ * @public
+ * @param {function(Object)|Date|number} start the starting date
+ * @param {function(Object)|Date|number} end the ending date
+ * @param {number} units the units to populate
+ * @return {Object|number}
+ */
+
+/* 1 */
+
+// placeholder for input's value
+
+/***
+     * Checks whether the form/input elements are valid
+     * @param input => input element(s) or a jquery selector, null for full form validation
+     * @param silent => do not show error messages, just return true/false
+     * @returns {boolean} return true when valid false otherwise
+     */
+
+/***
+     * Validates a single field, all validator functions are called and error messages are generated
+     * when a validator fails
+     * @param field
+     * @returns {boolean}
+     * @private
+     */
+
+/***
+     *
+     * @param elemOrName => The dom element when validator is applied on a specific field. A string when it's
+     * a global validator
+     * @param fn => validator function
+     * @param msg => message to show when validation fails. Supports templating. ${0} for the input's value, ${1} and
+     * so on are for the attribute values
+     * @param priority => priority of the validator function, higher valued function gets called first.
+     * @param halt => whether validation should stop for this field after current validation function
+     */
+
+/***
+     * An utility function that returns a 2-element array, first one is the element where error/success class is
+     * applied. 2nd one is the element where error message is displayed. 2nd element is created if doesn't exist and cached.
+     * @param field
+     * @returns {*}
+     * @private
+     */
+
+/***
+     * Adds error to a specific field
+     * @param input
+     * @param error
+     */
+
+// IE > 9 doesn't support multiple class removal
+
+/***
+     * Resets the errors
+     */
+
+/***
+     * Get errors of a specific field or the whole form
+     * @param input
+     * @returns {Array|*}
+     */
+
+/***
+     * Resets the errors and deletes all pristine fields
+     */
